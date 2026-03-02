@@ -4,16 +4,7 @@
 
 ---
 
-|                            |                                          |
-| -------------------------- | ---------------------------------------- |
-| **Nama Mata Kuliah** | Big Data dan Data Lakehouse              |
-| **Kode Mata Kuliah** |                                          |
-| **Semester**         | 6                                        |
-| **SKS**              | 3 SKS (2 SKS Teori + 1 SKS Praktik)      |
-| **Program Studi**    | Teknik Informatika / Teknologi Informasi |
-| **Prasyarat**        | Basis Data, Pemrograman                  |
-| **Dosen Pengampu**   | Fuad Dary Rosyadi S.Kom., M.Kom          |
-| **Tanggal Revisi**   | Februari 2026                            |
+* [ ]   **Nama Mata Kuliah**Big Data dan Data Lakehouse**Kode Mata Kuliah** **Semester**6**SKS**3 SKS (2 SKS Teori + 1 SKS Praktik)**Program Studi**Teknik Informatika / Teknologi Informasi**Prasyarat**Basis Data, Pemrograman**Dosen Pengampu**Fuad Dary Rosyadi S.Kom., M.Kom**Tanggal Revisi**Februari 2026
 
 ---
 
