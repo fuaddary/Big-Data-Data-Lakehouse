@@ -169,33 +169,33 @@ Teknologi untuk **mengambil data dari berbagai sumber** dan memasukkannya ke dal
 ┌────────────────────────────────────────────────────────────────────┐
 │                   PETA EKOSISTEM BIG DATA                          │
 │                                                                    │
-│   ┌─── Data Sources ─────────────────────────────────────────┐    │
-│   │ RDBMS │ IoT │ Log │ API │ Social Media │ File │ Stream   │    │
+│   ┌─── Data Sources ──────────────────────────────────────────┐    │
+│   │ RDBMS │ IoT │ Log │ API │ Social Media │ File │ Stream    │    │
 │   └───────────────────────────────────────────────────────────┘    │
 │                            │                                       │
 │                            ▼                                       │
-│   ┌─── Ingestion ────────────────────────────────────────────┐    │
-│   │      Kafka  │  NiFi  │  Flume  │  Debezium  │  Sqoop    │    │
+│   ┌─── Ingestion ─────────────────────────────────────────────┐    │
+│   │      Kafka  │  NiFi  │  Flume  │  Debezium  │  Sqoop      │    │
 │   └───────────────────────────────────────────────────────────┘    │
 │                            │                                       │
 │                            ▼                                       │
-│   ┌─── Storage ──────────────────────────────────────────────┐    │
-│   │ HDFS │ S3/MinIO │ MongoDB │ Cassandra │ Delta Lake       │    │
+│   ┌─── Storage ───────────────────────────────────────────────┐    │
+│   │ HDFS │ S3/MinIO │ MongoDB │ Cassandra │ Delta Lake        │    │
 │   └───────────────────────────────────────────────────────────┘    │
 │                            │                                       │
 │                            ▼                                       │
-│   ┌─── Processing ───────────────────────────────────────────┐    │
-│   │    Spark  │  Flink  │  Hive  │  Trino  │  MapReduce      │    │
+│   ┌─── Processing ────────────────────────────────────────────┐    │
+│   │    Spark  │  Flink  │  Hive  │  Trino  │  MapReduce       │    │
 │   └───────────────────────────────────────────────────────────┘    │
 │                            │                                       │
 │                            ▼                                       │
-│   ┌─── Analysis & Serving ───────────────────────────────────┐    │
+│   ┌─── Analysis & Serving ────────────────────────────────────┐    │
 │   │  Superset │ Grafana │ Jupyter │ MLlib │ Tableau │ Metabase│    │
 │   └───────────────────────────────────────────────────────────┘    │
 │                            │                                       │
-│   ┌─── Cross-cutting ───────────────────────────────────────┐     │
-│   │   Airflow (Orchestration)  │  Atlas (Governance)         │    │
-│   │   Docker/K8s (Infra)       │  MLflow (ML Ops)            │    │
+│   ┌─── Cross-cutting ────────────────────────────────────────┐     │
+│   │   Airflow (Orchestration)  │  Atlas (Governance)         │     │
+│   │   Docker/K8s (Infra)       │  MLflow (ML Ops)            │     │
 │   └──────────────────────────────────────────────────────────┘     │
 └────────────────────────────────────────────────────────────────────┘
 ```
@@ -375,7 +375,7 @@ Setiap kelompok berperan sebagai **Solution Architect** yang merancang solusi Bi
 > **Masalah:** 30% hasil panen gagal karena keputusan irigasi & pemupukan yang tidak data-driven.
 > **Misi:** Rancang sistem **rekomendasi pertanian berbasis data** — kapan menyiram, kapan panen, kapan pupuk, berdasarkan data sensor & cuaca.
 
-Rubrik Penilaian Aktivitas 2 : Peer Review
+Rubrik Penilaian Aktivitas 2 : **Peer Review**
 
 | Kriteria                                | Bobot |
 | --------------------------------------- | ----- |
@@ -395,18 +395,18 @@ Rubrik Penilaian Aktivitas 2 : Peer Review
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│              TANTANGAN TEKNIS BIG DATA                        │
+│              TANTANGAN TEKNIS BIG DATA                       │
 ├──────────────┬───────────────────────────────────────────────┤
-│ Skalabilitas │ Data tumbuh lebih cepat dari kapasitas →     │
+│ Skalabilitas │ Data tumbuh lebih cepat dari kapasitas →      │
 │              │ Solusi: horizontal scaling, distributed sys   │
 ├──────────────┤───────────────────────────────────────────────┤
-│ Integrasi    │ Data tersebar di banyak sumber & format →    │
-│ Data         │ Solusi: ETL/ELT pipeline, Data Lakehouse     │
+│ Integrasi    │ Data tersebar di banyak sumber & format →     │
+│ Data         │ Solusi: ETL/ELT pipeline, Data Lakehouse      │
 ├──────────────┤───────────────────────────────────────────────┤
-│ Kualitas     │ 26% data organisasi tidak akurat →           │
+│ Kualitas     │ 26% data organisasi tidak akurat →            │
 │ Data         │ Solusi: data validation, data quality tools   │
 ├──────────────┤───────────────────────────────────────────────┤
-│ Real-time    │ Latensi vs akurasi →                         │
+│ Real-time    │ Latensi vs akurasi →                          │
 │ Processing   │ Solusi: Lambda/Kappa architecture             │
 └──────────────┴───────────────────────────────────────────────┘
 ```
@@ -433,15 +433,15 @@ Rubrik Penilaian Aktivitas 2 : Peer Review
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                   RANGKUMAN HARI INI                         │
+│                   RANGKUMAN HARI INI                        │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  1. EKOSISTEM BIG DATA = 5 layer pipeline:                  │
-│     Source → Ingest → Store → Process → Serve              │
+│     Source → Ingest → Store → Process → Serve               │
 │                                                             │
 │  2. USE CASE DI 8 INDUSTRI:                                 │
-│     Fintech │ Healthcare │ E-Commerce │ Telco              │
-│     EdTech  │ Ride-Hail  │ Manufaktur │ AgriTech           │
+│     Fintech │ Healthcare │ E-Commerce │ Telco               │
+│     EdTech  │ Ride-Hail  │ Manufaktur │ AgriTech            │
 │                                                             │
 │  3. TANTANGAN = Teknis + Organisasi + Etika                 │
 │     Semuanya saling terkait!                                │
