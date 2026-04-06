@@ -713,7 +713,7 @@ Di akhir Fase 3, buat **satu tabel ringkasan** (dalam notebook) yang membandingk
    - Keputusan feature engineering
    - Tabel perbandingan model
    - Rekomendasi bisnis & batasan
-3. **Presentasi di Pertemuan 8 (5 menit + 3 menit tanya jawab)**:
+3. **Presentasi di Pertemuan 7 (5 menit + 3 menit tanya jawab)**:
 
    - Wajib demo notebook live
    - Setiap anggota kelompok harus siap menjawab pertanyaan tentang bagian yang mereka kerjakan
@@ -850,13 +850,6 @@ Di akhir Fase 3, buat **satu tabel ringkasan** (dalam notebook) yang membandingk
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## Preview Pertemuan 7
-
-Pada **Pertemuan 7**, setiap kelompok akan **mempresentasikan** hasil Tugas Kelompok (Eksplorasi Data Kaggle dengan Apache Spark). Siapkan:
-
-- Notebook Google Colab yang sudah bisa dijalankan ulang
-- Slide presentasi (5–8 halaman)
-- Durasi presentasi: 7 menit + 3 menit tanya jawab per kelompok
 
 ---
 
