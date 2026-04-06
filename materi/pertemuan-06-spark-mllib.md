@@ -579,7 +579,7 @@ print(f"  RMSE train: {lr_reg_model.summary.rootMeanSquaredError:.4f}")
 ---
 
 > **Jenis:** Kelompok (4–5 orang, sesuai pembagian kelompok kelas)
-> **Deadline:** Sebelum Pertemuan 8 — UTS (satu minggu via LMS)
+> **Deadline:** Sebelum Pertemuan 7 — UTS (satu minggu via LMS)
 > **Platform:** Google Colab (wajib) — submit link notebook yang bisa diakses publik + file PDF laporan singkat
 
 ---
@@ -594,7 +594,7 @@ Kelompok **wajib mencari dataset sendiri dari Kaggle** yang memenuhi syarat beri
 
 | Syarat            | Keterangan                                                                         |
 | ----------------- | ---------------------------------------------------------------------------------- |
-| **Ukuran**  | Minimal **10****0.000 baris** (bukan dataset tutorial seperti Titanic/Iris) |
+| **Ukuran**  | Minimal **100.000 baris** (bukan dataset tutorial seperti Titanic/Iris) |
 | **Format**  | CSV atau JSON                                                                      |
 | **Fitur**   | Minimal**8 kolom**, campuran numerik dan kategorik                           |
 | **Target**  | Ada kolom yang bisa dijadikan label klasifikasi ATAU nilai regresi                 |
