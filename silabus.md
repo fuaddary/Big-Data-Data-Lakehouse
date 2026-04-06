@@ -39,7 +39,7 @@ Di akhir perkuliahan, mahasiswa diharapkan dapat menggunakan berbagai jenis tekn
 | Kode | CPMK | CPL | Bobot |
 |------|------|-----|-------|
 | **CPMK-1** | Mahasiswa mampu menjelaskan dan mengidentifikasi konsep dasar Big Data, termasuk volume data yang besar, kecepatan data, keragaman data, dan nilai data. | CPL 3, CPL 6 | 20% |
-| **CPMK-2** | Mahasiswa mampu merancang dan mengelola infrastruktur Big Data untuk keperluan analisis menggunakan teknologi Big Data, seperti sistem manajemen database Apache Hadoop, Apache Spark, dan NoSQL. | CPL 2, CPL 3, CPL 6, CPL 7 | 30% |
+| **CPMK-2** | Mahasiswa mampu merancang dan mengelola infrastruktur Big Data untuk keperluan analisis menggunakan teknologi Big Data, seperti Apache Hadoop, Apache Spark, dan Spark MLlib. | CPL 2, CPL 3, CPL 6, CPL 7 | 30% |
 | **CPMK-3** | Mahasiswa mampu merancang dan mengimplementasikan struktur Data Lakehouse yang efisien. | CPL 2, CPL 3, CPL 6, CPL 7 | 30% |
 | **CPMK-4** | Mahasiswa mampu menerapkan teknik analisis data besar untuk mengekstrak informasi berharga dari kumpulan data yang besar. | CPL 2, CPL 3, CPL 6 | 20% |
 
@@ -55,7 +55,7 @@ Di akhir perkuliahan, mahasiswa diharapkan dapat menggunakan berbagai jenis tekn
 ### Modul 2: Infrastruktur dan Teknologi Big Data (Minggu 4–7)
 - Apache Hadoop: HDFS, YARN, dan MapReduce
 - Apache Spark: RDD, DataFrame, Spark SQL
-- NoSQL Databases: MongoDB, Cassandra, HBase
+- Spark MLlib: Machine Learning terdistribusi (klasifikasi, regresi, pipeline)
 - Apache Kafka: streaming data dan message broker
 - Containerisasi dan orkestrasi (Docker, Kubernetes)
 
@@ -108,15 +108,18 @@ Di akhir perkuliahan, mahasiswa diharapkan dapat menggunakan berbagai jenis tekn
 ### Buku Utama
 1. White, T. (2015). *Hadoop: The Definitive Guide* (4th ed.). O'Reilly Media.
 2. Zaharia, M., et al. (2018). *Learning Spark: Lightning-Fast Data Analytics* (2nd ed.). O'Reilly Media.
-3. Armbrust, M., et al. (2021). *Delta Lake: The Definitive Guide*. O'Reilly Media.
+3. Meng, X., et al. (2016). "MLlib: Machine Learning in Apache Spark." *Journal of Machine Learning Research*, 17, 1–7.
+4. Armbrust, M., et al. (2021). *Delta Lake: The Definitive Guide*. O'Reilly Media.
 
 ### Buku Pendukung
-4. Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media.
-5. Garg, N. (2013). *Apache Kafka*. Packt Publishing.
+5. Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media.
+6. Garg, N. (2013). *Apache Kafka*. Packt Publishing.
+7. Géron, A. (2022). *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow* (3rd ed.). O'Reilly Media.
 
 ### Referensi Online
 - Apache Hadoop Documentation: https://hadoop.apache.org/docs/
 - Apache Spark Documentation: https://spark.apache.org/docs/
+- Spark MLlib Documentation: https://spark.apache.org/docs/latest/ml-guide.html
 - Delta Lake Documentation: https://docs.delta.io/
 - Apache Airflow Documentation: https://airflow.apache.org/docs/
 
