@@ -1,13 +1,13 @@
 # Pertemuan 8: Apache Kafka — Event Streaming Platform
 
-|                           |                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------ |
-| **Mata Kuliah**     | Big Data dan Data Lakehouse                                                                |
-| **Pertemuan**       | 8 (Minggu 8)                                                                               |
-| **Durasi**          | ± 210 menit (belajar mandiri)                                                             |
-| **CPMK**            | CPMK-2                                                                                     |
-| **Kemampuan Akhir** | Mahasiswa mampu mengimplementasikan pipeline streaming data dengan Apache Kafka            |
-| **Metode**          | 🖥️ Asinkron — Belajar Mandiri, Hands-on Lab, Kuis Online, Tugas Kelompok (PBL)          |
+|                           |                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------- |
+| **Mata Kuliah**     | Big Data dan Data Lakehouse                                                       |
+| **Pertemuan**       | 8 (Minggu 8)                                                                      |
+| **Durasi**          | ± 210 menit (belajar mandiri)                                                    |
+| **CPMK**            | CPMK-2                                                                            |
+| **Kemampuan Akhir** | Mahasiswa mampu mengimplementasikan pipeline streaming data dengan Apache Kafka   |
+| **Metode**          | 🖥️ Asinkron — Belajar Mandiri, Hands-on Lab, Kuis Online, Tugas Kelompok (PBL) |
 
 ---
 
@@ -21,19 +21,19 @@
 
 Ikuti langkah-langkah berikut secara **berurutan**. Centang setiap langkah setelah selesai.
 
-| No | Langkah | Estimasi | Keterangan |
-| -- | ------- | -------- | ---------- |
-| 1 | 📖 Baca **Bagian 1**: Event Streaming & Filosofi Kafka | 20 menit | Konsep dasar, mengapa Kafka lahir |
-| 2 | 📖 Baca **Bagian 2**: Arsitektur & Komponen Inti | 25 menit | Broker, Topic, Partition, Offset, Consumer Group |
-| 3 | 📖 Baca **Bagian 3**: Desain Internal Kafka | 20 menit | Log storage, replication, delivery semantics |
-| 4 | 📖 Baca **Bagian 4**: Producer & Consumer API | 15 menit | Konfigurasi kritis, batching, offset management |
-| 5 | 📖 Baca **Bagian 5**: Ekosistem — Kafka Connect & Streams | 15 menit | Integrasi dengan sistem eksternal |
-| 6 | 🧠 Kerjakan **Kuis Online** (25 soal) | 20 menit | Akses link kuis di LMS |
-| 7 | 🛠️ Setup Docker Kafka | 10 menit | Jalankan Kafka lewat Docker Compose |
-| 8 | 🔧 Kerjakan **Lab 1**: Eksplorasi CLI & Topic Design | 25 menit | Internals: partition, offset, consumer lag |
-| 9 | 🔧 Kerjakan **Lab 2**: Pipeline Cuaca IoT Real-Time | 30 menit | Simulasi sensor multi-kota, windowing manual |
-| 10 | 🔧 Kerjakan **Lab 3**: Exactly-Once & Idempotent Producer | 20 menit | Uji delivery guarantees, offset commit manual |
-| 11 | 📝 Kerjakan **Tugas Kelompok (PBL)** dan submit via LMS | — | Rilis hari ini, deadline 2 minggu |
+| No | Langkah                                                         | Estimasi | Keterangan                                       |
+| -- | --------------------------------------------------------------- | -------- | ------------------------------------------------ |
+| 1  | 📖 Baca**Bagian 1**: Event Streaming & Filosofi Kafka     | 20 menit | Konsep dasar, mengapa Kafka lahir                |
+| 2  | 📖 Baca**Bagian 2**: Arsitektur & Komponen Inti           | 25 menit | Broker, Topic, Partition, Offset, Consumer Group |
+| 3  | 📖 Baca**Bagian 3**: Desain Internal Kafka                | 20 menit | Log storage, replication, delivery semantics     |
+| 4  | 📖 Baca**Bagian 4**: Producer & Consumer API              | 15 menit | Konfigurasi kritis, batching, offset management  |
+| 5  | 📖 Baca**Bagian 5**: Ekosistem — Kafka Connect & Streams | 15 menit | Integrasi dengan sistem eksternal                |
+| 6  | 🧠 Kerjakan**Kuis Online** (25 soal)                      | 20 menit | Akses link kuis di LMS                           |
+| 7  | 🛠️ Setup Docker Kafka                                         | 10 menit | Jalankan Kafka lewat Docker Compose              |
+| 8  | 🔧 Kerjakan**Lab 1**: Eksplorasi CLI & Topic Design       | 25 menit | Internals: partition, offset, consumer lag       |
+| 9  | 🔧 Kerjakan**Lab 2**: Pipeline Cuaca IoT Real-Time        | 30 menit | Simulasi sensor multi-kota, windowing manual     |
+| 10 | 🔧 Kerjakan**Lab 3**: Exactly-Once & Idempotent Producer  | 20 menit | Uji delivery guarantees, offset commit manual    |
+| 11 | 📝 Kerjakan**Tugas Kelompok (PBL)** dan submit via LMS    | —       | Rilis hari ini, deadline 2 minggu                |
 
 > ⏱️ **Total estimasi waktu:** ± 200–210 menit
 > 💡 Kamu bisa mencicil — tidak harus selesai sekaligus. Disarankan Lab 1 sebelum Lab 2.
@@ -68,12 +68,12 @@ Secara teknis, **event streaming** adalah praktik:
 >
 > Sebuah event merekam fakta bahwa *"sesuatu telah terjadi"* di dunia nyata atau dalam sistem bisnis. Menurut dokumentasi Kafka, setiap event memiliki empat komponen:
 >
-> | Komponen | Contoh |
-> | -------- | ------ |
-> | **Key** | `"user-alice"` |
-> | **Value** | `"made a payment of Rp 500.000 to Tokopedia"` |
-> | **Timestamp** | `"2026-04-19T14:32:00+07:00"` |
-> | **Headers** (opsional) | `{"source": "mobile-app", "version": "3.2"}` |
+> | Komponen                     | Contoh                                          |
+> | ---------------------------- | ----------------------------------------------- |
+> | **Key**                | `"user-alice"`                                |
+> | **Value**              | `"made a payment of Rp 500.000 to Tokopedia"` |
+> | **Timestamp**          | `"2026-04-19T14:32:00+07:00"`                 |
+> | **Headers** (opsional) | `{"source": "mobile-app", "version": "3.2"}`  |
 
 ### 1.2 Mengapa Kafka Lahir?
 
@@ -145,15 +145,15 @@ Kafka menggabungkan **tiga kemampuan** dalam satu platform terintegrasi:
 
 Menurut [kafka.apache.org/uses](https://kafka.apache.org/uses), berikut use case utama Kafka:
 
-| Use Case | Deskripsi | Contoh Nyata |
-| -------- | ---------- | ------------ |
-| **Messaging** | Pengganti message broker tradisional dengan throughput lebih tinggi, partisi built-in, dan replikasi | Decoupling microservices di startup fintech |
-| **Website Activity Tracking** | Original use case Kafka (LinkedIn) — publish setiap page view, klik, pencarian ke topic terpisah per tipe aktivitas | Tokopedia: track user journey sesaat |
-| **Metrics & Monitoring** | Agregasi statistik dari sistem terdistribusi menjadi feed terpusat | Monitoring cluster Hadoop/Spark |
-| **Log Aggregation** | Pengganti solusi log aggregation: abstraksi log sebagai stream (lebih rendah latensi dari Scribe/Flume) | Gojek: centralized log dari 500+ microservice |
-| **Stream Processing** | Pipeline multi-tahap: raw input → transformasi → output ke topic baru | Rekomendasi artikel berita real-time |
-| **Event Sourcing** | State changes disimpan sebagai time-ordered sequence of records | Sistem perbankan: audit trail yang immutable |
-| **Commit Log** | External commit log untuk distributed system — log compaction untuk re-sync node yang gagal | Database replication, CDC (Change Data Capture) |
+| Use Case                            | Deskripsi                                                                                                            | Contoh Nyata                                    |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **Messaging**                 | Pengganti message broker tradisional dengan throughput lebih tinggi, partisi built-in, dan replikasi                 | Decoupling microservices di startup fintech     |
+| **Website Activity Tracking** | Original use case Kafka (LinkedIn) — publish setiap page view, klik, pencarian ke topic terpisah per tipe aktivitas | Tokopedia: track user journey sesaat            |
+| **Metrics & Monitoring**      | Agregasi statistik dari sistem terdistribusi menjadi feed terpusat                                                   | Monitoring cluster Hadoop/Spark                 |
+| **Log Aggregation**           | Pengganti solusi log aggregation: abstraksi log sebagai stream (lebih rendah latensi dari Scribe/Flume)              | Gojek: centralized log dari 500+ microservice   |
+| **Stream Processing**         | Pipeline multi-tahap: raw input → transformasi → output ke topic baru                                              | Rekomendasi artikel berita real-time            |
+| **Event Sourcing**            | State changes disimpan sebagai time-ordered sequence of records                                                      | Sistem perbankan: audit trail yang immutable    |
+| **Commit Log**                | External commit log untuk distributed system — log compaction untuk re-sync node yang gagal                         | Database replication, CDC (Change Data Capture) |
 
 > 🇮🇩 **Studi Kasus Indonesia:**
 >
@@ -207,6 +207,7 @@ Kafka adalah **distributed system** yang terdiri dari server dan klien yang berk
 **Broker** adalah server Kafka yang membentuk storage layer. Dalam cluster produksi, biasanya ada 3 atau lebih broker yang tersebar di beberapa datacenter. Jika satu broker gagal, broker lain mengambil alih pekerjaannya tanpa kehilangan data.
 
 Dokumentasi Kafka 4.2 menyebutkan:
+
 > *"To let you implement mission-critical use cases, a Kafka cluster is highly scalable and fault-tolerant: if any of its servers fails, the other servers will take over their work to ensure continuous operations without any data loss."*
 
 #### 🔑 KRaft Controller (Mode Kafka 4.x)
@@ -244,10 +245,10 @@ Sejak Kafka **3.3** (KIP-833), mode **KRaft** (Kafka Raft) menggantikan ZooKeepe
 
 #### 💻 Client: Producer & Consumer
 
-| Komponen | Peran | Analogi |
-| -------- | ----- | ------- |
-| **Producer** | Menulis (publish) event ke topic Kafka | Pengirim surat |
-| **Consumer** | Membaca (subscribe) event dari topic Kafka | Penerima surat |
+| Komponen               | Peran                                        | Analogi           |
+| ---------------------- | -------------------------------------------- | ----------------- |
+| **Producer**     | Menulis (publish) event ke topic Kafka       | Pengirim surat    |
+| **Consumer**     | Membaca (subscribe) event dari topic Kafka   | Penerima surat    |
 | **Admin Client** | Manajemen topic, broker, konfigurasi cluster | Kepala kantor pos |
 
 ### 2.3 Topic & Partisi — Inti Penyimpanan Kafka
@@ -255,6 +256,7 @@ Sejak Kafka **3.3** (KIP-833), mode **KRaft** (Kafka Raft) menggantikan ZooKeepe
 #### 📁 Topic
 
 Menurut dokumentasi Kafka:
+
 > *"Topics in Kafka are always multi-producer and multi-subscriber: a topic can have zero, one, or many producers that write events to it, as well as zero, one, or many consumers that subscribe to these events. Events in a topic can be read as often as needed — unlike traditional messaging systems, events are not deleted after consumption."*
 
 **Retensi** dikontrol dengan konfigurasi `retention.ms` atau `retention.bytes` per topic.
@@ -307,7 +309,7 @@ JIKA event memiliki KEY:
 JIKA event TANPA KEY:
     Kafka 4.x: Gunakan "Sticky Partitioner" (batch per partisi
     sebelum pindah) untuk efisiensi — berbeda dari round-robin!
-    
+  
 JIKA producer menentukan partisi secara eksplisit:
     partisi = partisi yang ditentukan producer
 ```
@@ -383,10 +385,10 @@ Ini adalah salah satu **fitur paling powerful** Kafka: kemampuan untuk memiliki 
 
 Kafka menyimpan offset setiap consumer group di **internal topic** bernama `__consumer_offsets`. Dua strategi commit:
 
-| Strategi | Cara Kerja | Risiko |
-| -------- | ---------- | ------ |
-| **Auto commit** (`enable.auto.commit=true`) | Kafka commit offset secara periodik otomatis | Bisa terjadi **data loss** jika consumer crash sebelum auto-commit |
-| **Manual commit** (`enable.auto.commit=false`) | Developer tentukan kapan commit offset | Lebih aman, tapi perlu `commitSync()` atau `commitAsync()` eksplisit |
+| Strategi                                               | Cara Kerja                                   | Risiko                                                                   |
+| ------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------------------ |
+| **Auto commit** (`enable.auto.commit=true`)    | Kafka commit offset secara periodik otomatis | Bisa terjadi**data loss** jika consumer crash sebelum auto-commit  |
+| **Manual commit** (`enable.auto.commit=false`) | Developer tentukan kapan commit offset       | Lebih aman, tapi perlu `commitSync()` atau `commitAsync()` eksplisit |
 
 ---
 
@@ -397,7 +399,7 @@ Kafka menyimpan offset setiap consumer group di **internal topic** bernama `__co
 Fondasi desain Kafka adalah konsep **distributed commit log** — sebuah append-only, ordered, dan immutable sequence of records. Jay Kreps (salah satu creator Kafka) menulis:
 
 > *"A log is perhaps the simplest possible storage abstraction. It is an append-only, totally-ordered sequence of records ordered by time."*
-> — [The Log: What every software engineer should know about real-time data's unifying abstraction](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
+> — [The Log: What every software engineer should know about real-time data&#39;s unifying abstraction](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -489,13 +491,13 @@ Selain time-based retention, Kafka mendukung **log compaction** — mempertahank
 
 ### 3.4 Performa Kafka: Mengapa Sangat Cepat?
 
-| Teknik | Penjelasan | Dampak |
-| ------ | ---------- | ------ |
-| **Sequential I/O** | Kafka hanya append ke ujung log — tidak ada random write | Throughput disk mendekati throughput jaringan |
-| **Zero-Copy Transfer** | Menggunakan OS sendfile() — data dari disk ke socket tanpa copy via userspace | Menghemat 2 kali copy memori + 2 syscall |
-| **Batching** | Producer dan consumer bekerja dalam batch, bukan per-event | Amortisasi overhead jaringan; lebih efisien CPU |
-| **Compression** | Support GZIP, Snappy, LZ4, ZSTD per topic/producer | Mengurangi bandwidth hingga 4-5× |
-| **Page Cache** | Kafka menyerahkan caching ke OS page cache — lazy allocation | Consumer baca data langsung dari RAM jika masih fresh |
+| Teknik                       | Penjelasan                                                                     | Dampak                                                |
+| ---------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| **Sequential I/O**     | Kafka hanya append ke ujung log — tidak ada random write                      | Throughput disk mendekati throughput jaringan         |
+| **Zero-Copy Transfer** | Menggunakan OS sendfile() — data dari disk ke socket tanpa copy via userspace | Menghemat 2 kali copy memori + 2 syscall              |
+| **Batching**           | Producer dan consumer bekerja dalam batch, bukan per-event                     | Amortisasi overhead jaringan; lebih efisien CPU       |
+| **Compression**        | Support GZIP, Snappy, LZ4, ZSTD per topic/producer                             | Mengurangi bandwidth hingga 4-5×                     |
+| **Page Cache**         | Kafka menyerahkan caching ke OS page cache — lazy allocation                  | Consumer baca data langsung dari RAM jika masih fresh |
 
 ---
 
@@ -575,6 +577,7 @@ Berikut parameter yang paling berpengaruh terhadap perilaku producer:
 ### 4.3 Rebalancing Consumer Group
 
 **Rebalancing** terjadi ketika:
+
 - Consumer baru bergabung ke group
 - Consumer aktif mati (session timeout)
 - Partisi baru ditambahkan ke topic
@@ -612,13 +615,13 @@ Berikut parameter yang paling berpengaruh terhadap perilaku producer:
 
 Menurut [dokumentasi Kafka](https://kafka.apache.org/intro#kafka-apis), Kafka menyediakan 5 API inti:
 
-| API | Fungsi | Bahasa |
-| --- | ------ | ------ |
-| **Admin API** | Kelola dan inspeksi topic, broker, konfigurasi | Java/Scala + CLI |
-| **Producer API** | Publish stream of events ke satu atau banyak topic | Java/Scala + banyak client |
-| **Consumer API** | Subscribe dan proses stream of events dari topic | Java/Scala + banyak client |
-| **Kafka Streams API** | Stream processing — transformasi, agregasi, join, windowing | Java/Scala |
-| **Kafka Connect API** | Build koneksi import/export data dengan sistem eksternal | Java/Scala + konfigurasi |
+| API                         | Fungsi                                                       | Bahasa                     |
+| --------------------------- | ------------------------------------------------------------ | -------------------------- |
+| **Admin API**         | Kelola dan inspeksi topic, broker, konfigurasi               | Java/Scala + CLI           |
+| **Producer API**      | Publish stream of events ke satu atau banyak topic           | Java/Scala + banyak client |
+| **Consumer API**      | Subscribe dan proses stream of events dari topic             | Java/Scala + banyak client |
+| **Kafka Streams API** | Stream processing — transformasi, agregasi, join, windowing | Java/Scala                 |
+| **Kafka Connect API** | Build koneksi import/export data dengan sistem eksternal     | Java/Scala + konfigurasi   |
 
 ### 5.2 Kafka Connect
 
@@ -680,17 +683,17 @@ Menurut [dokumentasi Kafka](https://kafka.apache.org/intro#kafka-apis), Kafka me
 
 ### 5.4 Kafka vs. Messaging Systems Lain
 
-| Aspek | RabbitMQ | ActiveMQ | Apache Kafka |
-| ----- | -------- | -------- | ------------ |
-| **Model** | Push (broker push ke consumer) | Push | Pull (consumer request) |
-| **Pesan setelah dibaca** | Dihapus | Dihapus | **Disimpan** (configurable retention) |
-| **Throughput** | Ratusan ribu/detik | Ratusan ribu/detik | **Jutaan/detik** |
-| **Ordering** | Per queue | Per queue | **Per partition** (lebih kuat) |
-| **Replay** | ❌ Tidak bisa | ❌ Tidak bisa | **✅ Bisa** (replay dari offset manapun) |
-| **Multi-consumer** | Fan-out exchange | Per destination | **Consumer groups independen** |
-| **State Management** | Stateless | Stateless | **Stateful** (offset per group) |
-| **Ekosistem** | Plugin | Plugin | **Connect + Streams built-in** |
-| **Cocok untuk** | Task queue, RPC, job scheduling | Messaging enterprise | **Event streaming, data pipeline, log aggregation** |
+| Aspek                          | RabbitMQ                        | ActiveMQ             | Apache Kafka                                              |
+| ------------------------------ | ------------------------------- | -------------------- | --------------------------------------------------------- |
+| **Model**                | Push (broker push ke consumer)  | Push                 | Pull (consumer request)                                   |
+| **Pesan setelah dibaca** | Dihapus                         | Dihapus              | **Disimpan** (configurable retention)               |
+| **Throughput**           | Ratusan ribu/detik              | Ratusan ribu/detik   | **Jutaan/detik**                                    |
+| **Ordering**             | Per queue                       | Per queue            | **Per partition** (lebih kuat)                      |
+| **Replay**               | ❌ Tidak bisa                   | ❌ Tidak bisa        | **✅ Bisa** (replay dari offset manapun)            |
+| **Multi-consumer**       | Fan-out exchange                | Per destination      | **Consumer groups independen**                      |
+| **State Management**     | Stateless                       | Stateless            | **Stateful** (offset per group)                     |
+| **Ekosistem**            | Plugin                          | Plugin               | **Connect + Streams built-in**                      |
+| **Cocok untuk**          | Task queue, RPC, job scheduling | Messaging enterprise | **Event streaming, data pipeline, log aggregation** |
 
 ---
 
@@ -702,6 +705,7 @@ Menurut [dokumentasi Kafka](https://kafka.apache.org/intro#kafka-apis), Kafka me
 Akses kuis melalui **LMS** (tautan disediakan di halaman pertemuan 8). Kuis terdiri dari **25 soal** — kombinasi pilihan ganda dan benar/salah.
 
 **Ketentuan:**
+
 - ⏰ Batas waktu: 20 menit sejak kuis dibuka
 - 🔄 Dapat dikerjakan lebih dari 1 kali (nilai diambil yang terbaik)
 - 📊 Nilai langsung muncul setelah submit
@@ -838,6 +842,7 @@ kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
 **📝 Pertanyaan Refleksi:**
+
 1. Berapa partisi topic `gps-angkot`? Mengapa angka tersebut dipilih?
 2. Apa yang terjadi jika kita hanya punya 2 consumer untuk 6 partisi `gps-angkot`?
 3. Apa isi kolom `Leader` dan `Replicas` pada output `--describe`?
@@ -854,6 +859,7 @@ kafka-console-producer.sh \
 ```
 
 Ketik data GPS berikut (tekan Enter setelah setiap baris):
+
 ```
 rute-A|{"rute":"A","lat":-7.2575,"lon":112.7521,"speed":35,"penumpang":12,"ts":"2026-04-19T08:00:00"}
 rute-B|{"rute":"B","lat":-7.2612,"lon":112.7488,"speed":22,"penumpang":8,"ts":"2026-04-19T08:00:01"}
@@ -881,6 +887,7 @@ kafka-console-consumer.sh \
 ```
 
 **📝 Amati dan catat:**
+
 - Apakah semua event dari `rute-A` masuk ke partisi yang sama?
 - Apakah urutan event per rute terjaga?
 - Berapakah offset masing-masing partisi yang terisi?
@@ -904,6 +911,7 @@ docker exec -it kafka-broker \
 ```
 
 **📝 Analisis output `--describe`:**
+
 - Kolom `CURRENT-OFFSET`: offset terakhir yang sudah di-commit consumer
 - Kolom `LOG-END-OFFSET`: offset terbaru di broker
 - Kolom `LAG`: selisihnya — berapa event yang BELUM dibaca!
@@ -1192,6 +1200,7 @@ python consumer_analitik.py
 ```
 
 **📝 Pertanyaan Refleksi:**
+
 1. Mengapa `consumer_analitik.py` menggunakan `auto_offset_reset="earliest"` sedangkan dashboard menggunakan `"latest"`?
 2. Apa yang terjadi jika kamu menjalankan **2 instance** `consumer_dashboard.py` secara bersamaan? Bagaimana partisi dibagi?
 3. Coba hentikan `consumer_analitik.py`, tunggu 30 detik, lalu jalankan ulang. Apakah ia melanjutkan dari tempat ia berhenti atau mulai dari awal? Mengapa?
@@ -1385,6 +1394,7 @@ python consumer_hitung_transfer.py
 ```
 
 **📝 Pertanyaan Refleksi:**
+
 1. Berapa record yang muncul di mode `at-least-once` vs `exactly-once`?
 2. Dalam sistem perbankan nyata, apa konsekuensi nyata dari duplikat transfer?
 3. Kapan kamu **tidak perlu** exactly-once? (Hint: pikirkan trade-off antara kompleksitas dan kebutuhan bisnis)
@@ -1431,8 +1441,7 @@ python consumer_hitung_transfer.py
 
 ---
 
-# 📋 TUGAS KELOMPOK BIG PROJECT (masih dibuat gaes, mohon bersabar)
-
+# 📋 TUGAS KELOMPOK BIG PROJECT -> [ets-big-data-system](ets-big-data-system.md)
 
 ## Referensi Pertemuan 8
 
