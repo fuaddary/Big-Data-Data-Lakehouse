@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  spark-delta:
+    image: jupyter/pyspark-notebook:spark-3.5.0
+    container_name: spark-delta-lake
+    ports:
+      - "8888:8888" # JupyterLab
+      - "4040:4040" # Spark UI
+    volumes:
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    command: >
+      start-notebook.sh
+      --NotebookApp.token=''
+      --NotebookApp.password=''
