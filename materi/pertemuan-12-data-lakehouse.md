@@ -775,7 +775,7 @@ spark.read.format("delta").load(silver_path).printSchema()
 
 Berdasarkan pengalaman hands-on hari ini, kamu dan kelompokmu akan membangun pipeline Data Lakehouse dari tugas ETS sebelumnya
 
-**Detail tugas ada di:** [`materi/tugas/tugas-data-lakehouse.md`](../tugas/tugas-data-lakehouse.md)
+**Detail tugas ada di:** [`materi/tugas/tugas-data-lakehouse.md`](./tugas/tugas-data-lakehouse.md)
 
 ---
 
