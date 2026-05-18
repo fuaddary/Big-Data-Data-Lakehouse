@@ -773,17 +773,9 @@ spark.read.format("delta").load(silver_path).printSchema()
 
 # 📝 Tugas Week 12 → Dikumpulkan & Dipresentasikan Week 13
 
-Berdasarkan pengalaman hands-on hari ini, kamu dan pasanganmu (kelompok 2 orang) akan membangun pipeline Data Lakehouse menggunakan dataset nyata pilihan kalian.
+Berdasarkan pengalaman hands-on hari ini, kamu dan kelompokmu akan membangun pipeline Data Lakehouse dari tugas ETS sebelumnya
 
 **Detail tugas ada di:** [`materi/tugas/tugas-data-lakehouse.md`](../tugas/tugas-data-lakehouse.md)
-
-**Topik yang disarankan untuk dikaitkan dengan permasalahan kota:**
-
-- Data kualitas udara (AQICN, BMKG)
-- Data kecelakaan lalu lintas (data.go.id)
-- Data pasien/penyebaran penyakit (data BPJS / Kemenkes)
-- Data curah hujan dan banjir (BMKG / BNPB)
-- Data harga bahan pokok (Panel Harga Pangan Nasional)
 
 ---
 
